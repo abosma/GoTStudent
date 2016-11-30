@@ -83,12 +83,22 @@ def bevecht(is_ai):
 
     # Onderstaande code dient ter illustratie om te laten zien hoe ed DAL werkt.
 
-    vreemden = dal.geef_vreemden(False)             # False, omdat we niet in de AI-ronde zitten
+    vreemden = dal.geef_vreemden(False)
+
+    spelerKarakter = dal.geef_rol_van_karakter(dal.HOOFDSPELER)          # False, omdat we niet in de AI-ronde zitten
 
     if len(vreemden) == 1:
         print('Kennelijk maar 1 tegenstander...')
+        if(dal.geef_rol_van_karakter(vreemden[0]) == "Krijger"):
+            speel_paper_rock_scissors()
+        else:
+            dal.voeg_toe_aan_gezelschap(False, vreemden[0])
+    else:
+        for x in vreemden:
+            if(dal.geef_rol_van_karakter(x) == "Krijger"):
+                speel_paper_rock_scissors()
 
-    speel_paper_rock_scissors()
+        
 
     # En hier nog veel meer functionaliteit, zoals beschreven in de spelregels.
 

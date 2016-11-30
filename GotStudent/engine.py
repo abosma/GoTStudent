@@ -44,10 +44,10 @@ def main():
 
         print("Verder in ", end='')
         sys.stdout.flush()
-        for t in range(100, 0, -2):
+        for t in range(60, 0, -2):
             time.sleep(0.2)
             if t % 10 == 0:
-                print(str(t // 10), end=''
+                print(str(t // 10), end='')
             else:
                 print(".", end='')
 
