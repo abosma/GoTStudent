@@ -5,7 +5,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>3ee5c33e-02c9-485f-9e4c-09baa0e23455</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>GotStudent.py</StartupFile>
+    <StartupFile>engine.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,13 +21,26 @@
     <DebugSymbols>true</DebugSymbols>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="GotStudent.py" />
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="actions.py" />
+    <Compile Include="engine.py" />
+    <Compile Include="got.py" />
+    <Compile Include="inout.py" />
+    <Compile Include="in_memory_dal.py" />
+    <Compile Include="sql.py" />
+    <Compile Include="sql_dal.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="init_db.sql" />
+    <Content Include="kaart.gif" />
+    <Content Include="README.md" />
+    <Content Include="requirements.txt" />
+    <Content Include="spelregels.docx" />
+  </ItemGroup>
   <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
   <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
